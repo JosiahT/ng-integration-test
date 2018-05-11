@@ -12,8 +12,9 @@ import { VoterComponent } from './1-voter/voter.component';
 
 import { routes } from './app.routes';
 import { UsersComponent } from './users/users.component';
-import { NavComponent } from './nav/nav.component';
+// import { NavComponent } from './nav/nav.component';
 import { HighlightDirective } from './highlight.directive';
+import { TodoService } from './2-todos/todo.service';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,7 @@ import { HighlightDirective } from './highlight.directive';
     UserDetailsComponent,
     VoterComponent,
     UsersComponent,
-    NavComponent,
+    // NavComponent,
     HighlightDirective
   ],
   imports: [
@@ -32,7 +33,9 @@ import { HighlightDirective } from './highlight.directive';
     FormsModule,
     HttpModule
   ],
-  providers: [],
+  providers: [
+    TodoService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
